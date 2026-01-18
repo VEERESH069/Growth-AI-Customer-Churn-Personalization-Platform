@@ -2,9 +2,10 @@ import streamlit as st
 import requests
 import pandas as pd
 import numpy as np
+import os
 
-# API Configuration
-API_URL = "http://localhost:8000"
+# API Configuration - Use env var for Docker, fallback to localhost
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="GrowthAI Platform", page_icon="🚀", layout="wide")
 

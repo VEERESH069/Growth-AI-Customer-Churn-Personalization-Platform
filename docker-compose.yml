@@ -2,22 +2,28 @@ version: '3.8'
 
 services:
   api:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: growthai_api
     ports:
       - "8000:8000"
-    volumes:
-      # Mount source code for hot reloading during dev
-      - .:/app
     environment:
-      - MLFLOW_TRACKING_URI=http://mlflow:5000
-    depends_on:
-      - mlflow
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
 
-  mlflow:
-    image: ghcr.io/mlflow/mlflow:latest
-    container_name: growthai_mlflow
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: growthai_frontend
     ports:
-      - "5000:5000"
-    command: mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
 
