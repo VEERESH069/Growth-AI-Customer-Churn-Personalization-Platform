@@ -1,0 +1,11 @@
+customer_id,age,country,recency_days,frequency_total,frequency_30d,avg_order_value,category_diversity,login_count_14d,churn
+C001,28,India,21,2,2.0,750.0,2,0.0,0
+C002,41,US,103,2,0.0,325.0,2,0.0,1
+C003,35,UK,57,1,0.0,2000.0,1,0.0,0
+C004,22,India,13,1,1.0,100.0,1,1.0,0
+C005,50,Canada,26,2,1.0,460.0,2,0.0,0
+C006,30,Germany,138,1,0.0,600.0,1,0.0,1
+C007,45,US,19,2,1.0,650.0,2,0.0,0
+C008,27,France,91,1,0.0,250.0,1,0.0,1
+C009,33,India,108,1,0.0,1100.0,1,0.0,1
+C010,38,Canada,37,2,0.0,525.0,2,0.0,0

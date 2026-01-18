@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+mlflow
+fastapi
+uvicorn
+pydantic
+sentence-transformers
+faiss-cpu
+shap
+evidently
+joblib
+requests
+google-generativeai
+sqlalchemy
