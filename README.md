@@ -1,4 +1,4 @@
-### GrowthAI  Customer Churn & Personalization Platform
+# GrowthAI  Customer Churn & Personalization Platform
 
 GrowthAI is a production-ready AI platform designed to help businesses predict customer churn, personalize engagement, and automate retention workflows using a combination of classical machine learning, semantic search, and generative AI.
 
